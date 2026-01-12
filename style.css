@@ -262,3 +262,21 @@ body {
   .special-card.quiz-card {
     grid-column: 1 / -1;
   }
+
+
+@media (max-width: 700px) {
+
+  /* catégories principales */
+  .categories {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* cartes du bas (urgence + quizz) */
+  .special-categories {
+    grid-template-columns: 1fr;
+    padding: 0 20px 30px;
+  }
+
+}
+
