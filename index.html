@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enlever les bâtons des roues</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+  <header>
+    <h1> Endométrodarling </h1> <br>
+    <p class="intro">
+      J'ai fait ce site pour partager mon parcours avec l'endométriose,
+      des tips et astuces et des clefs de compréhension qui m'ont aidées. 
+      Chaque endométriose est différente, les techniques qui marchent pour moi ne sont pas forcément efficaces 
+      ou adaptées à tout le monde. Je sais que c'est dur de prendre du temps pour chercher, 
+      que certaines choses demandent plus de budget et que beaucoup de médecins sont très peu au courant
+      de quoi que ce soit, j'espère que ces listes aideront un peu à faire face à l'isolement 
+      qu'une endométriose peut créer. <br><br>
+      </div>
+    </p>
+  </header>
+    
+  
+  <main>
+      <section class="categories">
+    
+        <a href="comprendre.html" class="category-card">
+          <h2>Comprendre l’endométriose</h2>
+          <p>Définitions, mécanismes, témoignage personnel</p>
+        </a>
+    
+        <a href="stabiliser.html" class="category-card">
+          <h2>Gérer la douleur avec des professionels de la santé</h2>
+          <p>Les médicaments, l'échelle de la douleurs, les hormones, la kinésithérapie</p>
+        </a>
+    
+        <a href="gerer.html" class="category-card">
+          <h2>Techniques autonomes et routines à mettre en place</h2>
+          <p>Alimentation, recette, étirements, routines au quotidien</p>
+        </a>
+    
+    </section>
+  </main>
+
+  <section class="special-categories">
+
+    <a href="en cas d'urgence.html" class="special-card important-card">
+      <h2>En cas de crise, en cas d'urgence</h2>
+      <p>Informations essentielles pour gérer une crise de douleurs pelviennes</p>
+    </a>
+  
+    <details class="special-card quiz-card">
+      <summary>Quizz</summary>
+    
+      <form id="endoQuiz">
+        <p>Quiz rapide et grossier pour te poser la question :</p>
+          <p>1. As-tu eu mal au ventre pendant tes règles ces 6 derniers mois ?</p>
+          <label><input type="radio" name="q1" value="endo"> Oui</label>
+          <label><input type="radio" name="q1" value="none"> Non</label>
+    
+          <p>2. As-tu déjà eu mal aux jambes ou en bas du dos pendant tes règles ?</p>
+          <label><input type="radio" name="q2" value="endo"> Oui</label>
+          <label><input type="radio" name="q2" value="none"> Non</label>
+    
+          <p>3. As-tu des cycles irréguliers ?</p>
+          <label><input type="radio" name="q3" value="endo"> Oui</label>
+          <label><input type="radio" name="q3" value="none"> Non</label>
+    
+          <p>4. As-tu déjà rêvé d'arracher l'utérus de ton corps suite à des douleurs ?</p>
+          <label><input type="radio" name="q4" value="endo"> Oui</label>
+          <label><input type="radio" name="q4" value="none"> Non</label>
+    
+          <p>5. As-tu des douleurs quand tu fais caca ?</p>
+          <label><input type="radio" name="q5" value="endo"> Oui</label>
+          <label><input type="radio" name="q5" value="none"> Non</label>
+    
+          <p>6. As-tu parfois l'impression qu'on te plante des épées dans le rectum alors que tu ne bouges pas ?</p>
+          <label><input type="radio" name="q6" value="endo"> Oui c'est horrible</label>
+          <label><input type="radio" name="q6" value="none"> Non wtf</label>
+  
+          <p>7. As tu parfois envie d'uriner très souvent même si tu viens d'uriner ?</p>
+          <label><input type="radio" name="q7" value="endo"> oui</label>
+          <label><input type="radio" name="q7" value="none"> non ça va</label>
+  
+          <p>8. As-tu parfois la sensation d'être un robot rouillé ?</p>
+          <label><input type="radio" name="q8" value="endo"> Oui c'est horrible</label>
+          <label><input type="radio" name="q8" value="none"> Non wtf</label>
+  
+  
+          <p>9. T'es tu déjà demandé si tu avais de l'endométriose ?</p>
+          <label><input type="radio" name="q9" value="endo"> Oui lol </label>
+          <label><input type="radio" name="q9" value="none"> Non lol</label>
+  
+    
+          <button type="button" onclick="getEndoResult()">Voir le résultat</button>
+          <div id="endoResult"></div>
+        </form>
+      </details>
+      
+    
+  
+  </section>
+  
+
+  <footer>
+    <p>✨ Si tu veux plus de précisions n'hésite pas à me contacter sur instagram @oxanaoox ou par mail oxana.redolfi@ensapc.fr</p>
+  </footer>
+  <script>
+   
+  
+    function getEndoResult() {
+      const form = document.getElementById('endoQuiz');
+      const resultDiv = document.getElementById('endoResult');
+      let score = 0;
+  
+      const formData = new FormData(form);
+      for (let value of formData.values()) {
+        if (value === "endo") score++;
+      }
+  
+      if (score >= 3) {
+        resultDiv.innerHTML = "dsl bb tu as probablement une endométriose";
+      } else {
+        resultDiv.innerHTML = "trop stylé tout va bien pour l'instant";
+      }
+    }
+  </script>
+</body>
+</html>
