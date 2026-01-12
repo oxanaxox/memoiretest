@@ -1,0 +1,264 @@
+
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #ccc3ff98;
+    color: #222;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .category-card {
+    display: block;
+    padding: 30px;
+    background: #aefeff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .special-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 40px 40px;
+  }
+  
+ 
+  .special-card {
+    display: block;
+    padding: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+  
+  
+  .important-card {
+    background: #fcff4b;
+    border: 3px solid #491414;
+  }
+  
+
+  .quiz-card {
+    background: #fff3bf;
+    border: 3px dashed #f4a261;
+  }
+  
+
+  .med-button {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0px;
+    background-color: #87faab;
+    color: rgb(81, 44, 44);
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .med-button:hover {
+    background-color: #dcdddd;
+  }
+
+  
+  header {
+    text-align: center;
+    padding: 1rem 1rem 1rem;
+  }
+
+
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #452e2e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .intro {
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+  
+ 
+  
+  .tools {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .tools h2 {
+    text-align: center;
+    color: #503630;
+    margin-bottom: 1rem;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    text-decoration: dotted underline;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 200px;
+    background-color: #cefad2;
+    color: #372929;
+    text-align: left;
+    border: 1px solid #445e3d;
+    border-radius: 4px;
+    padding: 6px 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    font-size: 0.8em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
+  details {
+    background-color: rgba(184, 222, 242, 0.552);
+    border: 1px solid #432727;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  
+  #quizContent {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background-color: #a3fff7;
+    border: 2px solid #4f323a;
+    border-radius: 40px;
+    padding: 1.5rem;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  #quizContent.hidden {
+    display: none;
+  }
+  
+  #endoQuiz p {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #4b2e2e;
+  }
+  
+  #endoQuiz label {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+  }
+  
+  #endoQuiz button {
+    margin-top: 1.5rem;
+    background-color: #bce2d0;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #endoResult {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4a2525;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .special-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+  
+  .special-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .special-card h2 {
+    font-size: 1rem;
+    margin: 0 0 4px;
+  }
+  
+  .special-card p {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+  
+  
+  #openQuiz {
+    cursor: pointer;
+  }
+  
+  summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .special-card.quiz-card {
+    grid-column: 1 / -1;
+  }
