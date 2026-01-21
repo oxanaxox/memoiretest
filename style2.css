@@ -1,0 +1,32 @@
+.page {
+  display: grid;
+  grid-template-columns: 1.7fr 0.9fr; /* gauche plus étroit, droite plus large */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.texte-gauche {
+  max-width: 700px; /* empêche le texte d’être trop étalé */
+  line-height: 1.6;
+}
+
+.texte-droit {
+  line-height: 1.7;
+}
+
+.important {
+  background: #f6f6f6;
+  padding: 1.5rem;
+  border-left: 4px solid black;
+}
+
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .texte-gauche {
+    max-width: 100%;
+  }
+}
